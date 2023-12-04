@@ -21,4 +21,6 @@ class StackFrontier:
     def remove(self):
         if self.empty():
             raise Exception("Empty frontier")
-        node = 
+        node = self.frontier[-1]
+        self.frontier = self.frontier[:-1]
+        return node
