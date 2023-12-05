@@ -9,10 +9,10 @@ class StackFrontier:
     def __init__(self):
         self.frontier = []
 
-    def add(self, node):
+    def add(self, node: Node):
         self.frontier.append(node)
         
-    def contains_state(self, state):
+    def contains_state(self, state:array):
         return any(node.state == state for node in self.frontier)
     
     def empyt(self):
@@ -24,3 +24,4 @@ class StackFrontier:
         node = self.frontier[-1]
         self.frontier = self.frontier[:-1]
         return node
+    
